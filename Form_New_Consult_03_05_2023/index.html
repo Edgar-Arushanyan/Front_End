@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Form New</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Join the club!</h2>
+      <form action="/submit" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          minlength="8"
+          required
+        />
+
+        <label for="passwordConfirm">passwordConfirm:</label>
+        <input
+          type="password"
+          id="passwordConfirm"
+          name="password"
+          minlength="8"
+          required
+        />
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" name="birthdate" required />
+
+        <label for="interests">Interests</label>
+        <div class="interest-container">
+          <div class="interest-option">
+            Чтение:
+            <input
+              type="checkbox"
+              name="interests[]"
+              id="optional1"
+              value="optional1"/>    
+          </div>
+          <div class="interest-option">
+            игра на гитаре:
+            <input
+              type="checkbox"
+              name="interests[]"
+              id="optional2"
+              value="optional2"/>       
+          </div>
+          <div class="interest-option">
+            Програмирование:
+            <input
+              type="checkbox"
+              name="interests[]"
+              id="optional3"
+              value="optional3"/>      
+          </div>
+          <div class="interest-option">
+            Психология:
+            <input
+              type="checkbox"
+              name="interests[]"
+              id="optional4"
+              value="optional4"/>           
+          </div>
+          <label for="agreement">Agreement</label>
+          <div class="terms-container">
+            <input type="checkbox" id="agreement" value="agreement" />
+            <label for="agreement"
+              >I confirm with <a href="https://www.google.com">terms and condition</a></label>           
+          </div>
+          <input type="submit" value="Join in" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
