@@ -10,6 +10,9 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
+  // 1. создаём оболочку в виде компонента Provider с обязательным атрибутом 
+  //store аокруг компонента  App 
+  
   <Provider store={store}>
     <App />
   </Provider>
